@@ -1,0 +1,6 @@
+module.exports = {
+    ACCOUNT_SID: 'AC938fb0f833e71c676e34b8cb7e8b8ac8',
+    AUTH_TOKEN: '929307394a9a9fd29be1d0fa8cb1e3cc',
+    TO_PHONE: '+18658049305',
+    FROM_PHONE: '+19709991211'
+}

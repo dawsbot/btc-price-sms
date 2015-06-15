@@ -15,6 +15,9 @@
   "readmeFilename": "README.md",
   "gitHead": "47e774b01321f952681c653aa61fa80ab74a0394",
   "dependencies": {
+    "bitfinex": "^1.0.3",
+    "body-parser": "^1.13.0",
+    "express": "^4.12.4",
     "http": "0.0.0",
     "twilio": "^2.2.1"
   }

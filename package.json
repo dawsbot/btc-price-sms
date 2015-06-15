@@ -3,15 +3,12 @@
   "version": "0.0.0",
   "description": "SMS interaction with Bitcoin",
   "main": "inbound.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dawsonbotsford/bitcoinsms.git"
   },
-  "author": "",
-  "license": "BSD",
+  "author": "dawsonbotsford",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "gitHead": "47e774b01321f952681c653aa61fa80ab74a0394",
   "dependencies": {

@@ -44,6 +44,14 @@ app.get('/', function(req, res) {
    });
 });
 
+app.post('/', function(req, res) {
+
+  req.on('end', function() {
+    //if (req.body.Body === 'Bitfinex'){
+    bitfinexTicker(res);
+   });
+});
+
 app.listen(process.env.PORT || 3000, function() {
    console.log('Express serving up');
 });

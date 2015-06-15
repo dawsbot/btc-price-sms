@@ -1,22 +1,49 @@
+var express = require('express');
 var http = require('http');
 var twilio = require('twilio');
+var config = require('./config');
+var bodyParser = require('body-parser');
+var Bitfinex = require('bitfinex');
 
-http.createServer(function (req, res) {
+var app = express();
+var bitfinex = new Bitfinex(config.BITFINEX_KEY, config.BITFINEX_SECRET);
 
-  var body = '';
+var bitfinexTicker = function(res) {
+    bitfinex.ticker('btcusd', function(err, resp) {
+        if (!err){
+            var data = ''
+            data += 'Bitfinex BTC to USD\n' +
+                'Last Price: ' + resp.last_price + '\n' +
+                'Day Low: ' + resp.low + "\n" +
+                'Day High: ' + resp.high + "\n" +
+                'Thanks for using BitcoinSMS!'
+            makeTwiml(data, res);
+        }
+        else {
+            makeTwiml(err, res);
+        }
+    });
+}
 
-  req.on('data', function(data) {
-    body += data;
-  });
+var makeTwiml = function(body, res) {
 
-  req.on('end', function() {
-    //Create TwiML response
     var twiml = new twilio.TwimlResponse();
 
-    twiml.message('Thanks, your message of "' + body + '" was received!');
+    twiml.message(body);
 
    res.writeHead(200, {'Content-Type': 'text/xml'});
    res.end(twiml.toString());
-   });
 
-}).listen(process.env.PORT || 3000);
+}
+
+app.get('/', function(req, res) {
+
+  req.on('end', function() {
+    //if (req.body.Body === 'Bitfinex'){
+    bitfinexTicker(res);
+   });
+});
+
+app.listen(process.env.PORT || 3000, function() {
+   console.log('Express serving up');
+});

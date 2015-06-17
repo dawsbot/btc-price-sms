@@ -1,12 +1,11 @@
 var express = require('express');
 var http = require('http');
 var twilio = require('twilio');
-var config = require('./config');
 var bodyParser = require('body-parser');
 var Bitfinex = require('bitfinex');
 
 var app = express();
-var bitfinex = new Bitfinex(config.BITFINEX_KEY, config.BITFINEX_SECRET);
+var bitfinex = new Bitfinex();
 
 var bitfinexTicker = function(res) {
     bitfinex.ticker('btcusd', function(err, resp) {

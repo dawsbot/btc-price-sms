@@ -1,0 +1,24 @@
+{
+  "name": "btc-price-sms",
+  "version": "1.0.0",
+  "description": "Get the current Bitcoin price sent to you on the Coinbase exchange using Twilio's node.js API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawsonbotsford/btc-price-sms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dawsonbotsford/btc-price-sms/issues"
+  },
+  "homepage": "https://github.com/dawsonbotsford/btc-price-sms#readme",
+  "dependencies": {
+    "coinbase-exchange": "^0.2.0",
+    "express": "^4.12.4",
+    "twilio": "^2.2.1"
+  }
+}

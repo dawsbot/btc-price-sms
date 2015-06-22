@@ -19,6 +19,7 @@
   "dependencies": {
     "coinbase-exchange": "^0.2.0",
     "express": "^4.12.4",
+    "http": "0.0.0",
     "twilio": "^2.2.1"
   }
 }

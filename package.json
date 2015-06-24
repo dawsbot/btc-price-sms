@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/dawsonbotsford/btc-price-sms.git"
   },
+  "engines": {
+    "node": "0.11.x"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {

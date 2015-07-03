@@ -11,8 +11,8 @@
     "url": "git+https://github.com/dawsonbotsford/btc-price-sms.git"
   },
   "engines": {
-    "node": "0.8.21",
-    "npm" : "2.11.x"
+    "node": "0.12.5",
+    "npm": "2.11.x"
   },
   "author": "dawsonbotsford",
   "license": "MIT",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/dawsonbotsford/btc-price-sms#readme",
   "dependencies": {
     "coinbase-exchange": "^0.2.0",
-    "express": "^4.12.4",
+    "express": "^4.13.0",
     "twilio": "^2.2.1"
   }
 }

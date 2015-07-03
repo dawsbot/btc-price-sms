@@ -8,12 +8,13 @@ var twilio = require('twilio');
 
 var generatePrice = function(res) {
 
+    console.log('yo')
     coinbaseClient.getProductTicker( function(err, response, data) {
         var myMessage = "The current price is $" +
             Number(data.price).toFixed(2) + " per Bitcoin."
+        console.log(myMessage)
         makeTwiml(myMessage, res);
     });
-
 }
 
 var makeTwiml = function(body, res) {
@@ -26,15 +27,11 @@ var makeTwiml = function(body, res) {
 }
 
 app.get('/', function(request, response) {
-    request.on('end', function() {
-        generatePrice(response);
-    });
+    generatePrice(response);
 });
 
 app.post('/', function(request, response) {
-    request.on('end', function() {
-        generatePrice(response);
-    });
+    generatePrice(response);
 });
 
 app.listen((process.env.PORT || 3000), function() {

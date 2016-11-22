@@ -1,10 +1,13 @@
 # btc-price-sms
-Want the current Bitcoin price via SMS?
+> Get current price of Bitcoin vd
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 Using this code and Twilio, you can access data derived from the blockchain
-without needing internet access! Full tutorial available [on my blog](http://bit.ly/1JaJDJA).
+**without internet access!** 
 
-* Node.js app
+Makes use of:
+
 * Coinbase API
 * Twilio used for SMS
 
